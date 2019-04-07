@@ -1,0 +1,28 @@
+.page
+{
+	position:relative;
+	top:20px;
+	width:18px;
+	margin-right:2px;
+	height:20px;
+	display:table;
+	text-align:center;
+	background-color:rgb(235, 235, 235);
+	float:left;
+	text-decoration:none;
+	border: 1px solid rgb(189, 176, 176);
+}
+.page:hover
+{
+	position:relative;
+	top:20px;
+	width:18px;
+	margin-right:2px;
+	height:20px;
+	display:table;
+	text-align:center;
+	background-color:rgb(197, 197, 197);
+	float:left;
+	text-decoration:none;
+	border: 1px solid rgb(189, 176, 176);
+}
