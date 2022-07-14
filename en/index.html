@@ -1,0 +1,224 @@
+<html>
+	<head>	
+		<meta charset="ISO-8859-1">
+		<title>TabelaPagina&ccedil;&atilde;o - Jquery Plugin for paginate tables</title>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script type="text/javascript" src="../js/tabelaPaginacao.js"></script>
+		<script src="https://duhsoares21.github.io/tabelaPaginacao/js/shCore.js" type="text/javascript"></script>
+		<script src='https://duhsoares21.github.io/tabelaPaginacao/js/shBrushXml.js' type='text/javascript'></script>
+		<script src='https://duhsoares21.github.io/tabelaPaginacao/js/shBrushJScript.js' type='text/javascript'></script>
+		<link rel="stylesheet" href="../css/tabelaPaginacao.css" />
+		<link href="https://duhsoares21.github.io/tabelaPaginacao/css/shThemeDefault.css" rel="stylesheet" type="text/css" />
+		<script>
+		window.onload=function()
+		{
+			$.tabelaPaginacao(tableID='tab',rowPrefix='',_MaxItems=4,PagLocation='page');
+		}
+		</script>
+		<style>
+		body
+		{
+			background-color:#00B5E8;
+		}
+		#main
+		{
+			position:relative;
+			left:170px;
+			width:1000px;
+			height:auto;
+		}
+		#header
+		{
+			z-index:1;
+			position:fixed;
+			top:0px;	
+			left:0px;
+			border-top:1px dashed #fff;
+			border-bottom:1px dashed #fff;
+			width:100%;
+			height:80px;
+			background-color:#1D81B7;
+		}
+		#logo
+		{
+			position:relative;
+			left:450px;
+			top:3px;
+			width:437px;
+			height:78px;
+			background-image:url("../images/logo.png");
+		}
+		#content	
+		{
+			border: 1px solid #000000;
+			padding-left:40px;
+			background-color:#ffffff;
+			width:750px;
+			position:relative;
+			left:100px;
+			top:20px;
+			height:auto;
+			margin-top:100px;
+			margin-bottom:-80px;
+		}
+		#push
+		{
+			margin-top:130px;
+		}
+		#footer
+		{
+			z-index:1;
+			position:relative;
+			bottom:-10px;	
+			left:-10px;
+			border-top:1px solid #cbcbcb;
+			width:1350px;
+			height:50px;
+			background-color:#1D81B7;
+			text-align:center;
+			padding-top:5px;
+		}
+		#devBy	
+		{
+			font-family: Tahoma;
+			color:#fff;
+			font-size:16px;
+		}
+		#copy	
+		{
+			font-family: Tahoma;
+			color:#fff;
+			font-size:14px;
+		}
+		</style>
+	</head>
+	<body>
+		<div id="header">
+			<div id="logo">
+			</div>
+		</div>
+		<div id="main">
+			<div id="content">
+			<h1>TabelaPagina&ccedil;&atilde;o</h1>
+			<p>TabelaPagina&ccedil;&atilde;o is a jQuery plugin that allow you to paginate html tables.<br> This way you can split your table in many pages</p>
+			<p>Features and Advantages</p>
+			<ul>
+				<li>Easy to use and setup</li>
+				<li>lightweight! Script - 2kb css - 1kb : 3Kb total</li>
+				<li>customizable using css</li>
+				<li>It's cross-browser</li>
+				<li>It's Free!!!</li>
+			</ul>
+			<p><h1>Plugin live example:</h1></p>
+			<br>
+			<table id="tab" border="1" style="border: 1px solid #ffffff;">
+				<thead>
+				<th>Name</th>
+				<th>Age</th>
+				<th>Height</th>
+				</thead>
+				<tr>
+					<td>Carlos</td>
+					<td>19</td>
+					<td>1.74</td>
+				</tr>
+				<tr>
+					<td>Alice</td>
+					<td>17</td>
+					<td>1.63</td>
+				</tr>
+				<tr>
+					<td>Gustavo</td>
+					<td>21</td>
+					<td>1.82</td>
+				</tr>
+				<tr>
+					<td>Patricia</td>
+					<td>23</td>
+					<td>1.69</td>
+				</tr>
+				<tr>
+					<td>Julia</td>
+					<td>15</td>
+					<td>1.52</td>
+				</tr>
+				<tr>
+					<td>Graziele</td>
+					<td>20</td>
+					<td>1.69</td>
+				</tr>
+				<tr>
+					<td>Andrew</td>
+					<td>21</td>
+					<td>1.72</td>
+				</tr>
+				<tr>
+					<td>Bruno</td>
+					<td>26</td>
+					<td>1.78</td>
+				</tr>
+				<tr>
+					<td>Gabrielle</td>
+					<td>19</td>
+					<td>1.58</td>
+				</tr>
+				<tr>
+					<td>Eduardo</td>
+					<td>20</td>
+					<td>1.69</td>
+				</tr>
+				</table>
+				<div id="page"></div>
+				<br><br>
+				<h1>Mode of use:</h1>
+				
+				<p>The form of use it's easy and simple to understand and the code explain it self.<br>See the code and a explanation of the parameters bellow.</p>
+				<pre class="brush:js">
+				 &nbsp;&lt;script type="text/javascript" src="tabelaPaginacao.js"></script>
+				 &nbsp;&lt;link rel="stylesheet" href="tabelaPaginacao.css" />
+				 &nbsp;&lt;script>
+				     &nbsp;window.onload=function()
+					 &nbsp;{
+						 &nbsp;$.tabelaPaginacao(tableID='tab',rowPrefix='row',MaxItemsPage=3,PagLocation='page');
+				  	 &nbsp;}	
+				 &nbsp;&lt;/script>
+				</pre>
+				<p>
+					<ul>
+						<li>
+							<b>tableId</b>: It's the Id of the table who be paginated.<b> (required)</b>
+						</li>					
+						<li>
+							<b>rowPrefix</b>: It's the prefix that will be used on the identification of every table row 		ex.:row_1,row_2 etc.<b> (optional)</b>
+						</li>
+						<li>
+							<b>MaxItemsPage</b>: It's the number of items per page.<b> (required)</b>
+						</li>
+						<li>
+							<b>PagLocation</b>: It's the id of the object where the paginate buttons will be appended.<b> (required)</b>
+						</li>
+					</ul>
+				</p>
+				<p><h1>Compatibility:</h1></p>
+				<p>The following browsers are supported: Internet Explorer 6+, Mozilla Firefox, Google Chrome, Safari e Opera</p>
+				<p>For any bug or error, click on my name and send me a mail <a href="mailto:eduardo@pladoo.com.br?Subject=Bugs%20and%20errors">Eduardo Soares</a></p>
+				<p><h1>Download:</h1></p>
+				<p>Click <a target="_blank" href="https://www.yousendit.com/download/WFJYMWZPZ2pwTVZ2TzhUQw">here</a> to download the TabelaPagina&ccedil;&atilde;o</p>
+			</div>
+		</div>
+		<div id="push"></div>
+		<div id="footer">
+			<span id="devBy">Plugin e Site Developed by - Eduardo Soares</span>
+		<br><span id="copy">Copyright &copy; 2013-2018 All rights reserved</span>
+		</div>
+		<script type="text/javascript">
+	
+		SyntaxHighlighter.defaults['html-script'] = true;
+		SyntaxHighlighter.defaults['tab-size'] = 4;
+		SyntaxHighlighter.defaults['toolbar'] = false;
+	
+		SyntaxHighlighter.all()	
+
+		</script>
+	</body>
+</html>
